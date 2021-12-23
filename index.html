@@ -1,0 +1,53 @@
+<!--
+ * @Descripttion:
+ * @version:
+ * @Author: guanxiaoxin
+ * @Date: 2021-12-22 15:51:40
+ * @LastEditors: guanxiaoxin
+ * @LastEditTime: 2021-12-23 14:17:06
+ * @FilePath: /guan_fun/index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/li.css">
+</head>
+
+<body>
+  <div>
+    <div class="loading">
+      <span style="--i:1"></span>
+      <span style="--i:2"></span>
+      <span style="--i:3"></span>
+      <span style="--i:4"></span>
+      <span style="--i:5"></span>
+      <span style="--i:6"></span>
+      <span style="--i:7"></span>
+    </div>
+    <svg>
+      <filter id="gxy">
+        <!-- feGaussianBlur 创建模糊滤镜 -->
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10">
+        </feGaussianBlur>
+        <feColorMatrix values="
+        1 0 0 0 0
+        0 1 0 0 0
+        0 0 1 0 0
+        0 0 0 30 -10
+        "></feColorMatrix>
+      </filter>
+    </svg>
+  </div>
+  <script src="./downloadFile.js"></script>
+  <script src="./background.js"></script>
+  <script>
+    canvasBackGround()
+  </script>
+</body>
+
+</html>
